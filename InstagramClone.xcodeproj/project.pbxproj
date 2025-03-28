@@ -12,6 +12,7 @@
 		38AFB1C52D90DC4E002BA318 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 38AFB1C42D90DC4E002BA318 /* FirebaseFirestore */; };
 		38AFB1C72D90DC4E002BA318 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 38AFB1C62D90DC4E002BA318 /* FirebaseFirestoreSwift */; };
 		38AFB1C92D90DC4E002BA318 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 38AFB1C82D90DC4E002BA318 /* FirebaseStorage */; };
+		38BDFD3A2D96DFBF0041095D /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = 38BDFD392D96DF950041095D /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		3872E2F72D8E7AAB0080803F /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3872E3072D8E7AAC0080803F /* InstagramCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3872E3112D8E7AAC0080803F /* InstagramCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BDFD392D96DF950041095D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -109,6 +111,7 @@
 		3872E2EE2D8E7AAB0080803F = {
 			isa = PBXGroup;
 			children = (
+				38BDFD392D96DF950041095D /* .gitignore */,
 				381210CB2D92980800B87843 /* manager */,
 				385CB9C42D92BE5D00FF8B35 /* InstagramClone */,
 				3872E3142D8E7AAC0080803F /* InstagramCloneUITests */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BDFD3A2D96DFBF0041095D /* .gitignore in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
