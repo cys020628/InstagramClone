@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct ProfileView: View {
-    
+    @Environment(\.dismiss) var dismiss
     @State var viewModel = ProfileViewModel()
     
     let columns: [GridItem] = [
@@ -33,10 +33,10 @@ struct ProfileView: View {
                         // 선택한 이미지가 있는지
                         if let profileImage = viewModel.profileImage {
                             profileImage
-                                 .resizable()
-                                 .frame(width: 75, height: 75)
-                                 .clipShape(Circle())
-                                 .padding(.bottom,10)
+                                .resizable()
+                                .frame(width: 75, height: 75)
+                                .clipShape(Circle())
+                                .padding(.bottom,10)
                             // 서버에 이미지가 올라가 있는지
                         }else if let imageUrl = viewModel.user?.profileImageUrl{
                             let url = URL(string: imageUrl)
@@ -108,19 +108,19 @@ struct ProfileView: View {
                     
                     LazyVGrid(columns: columns,spacing: 2) {
                         
-//                        ForEach(0..<10) { _ in
-//                            Image("image_lion")
-//                                .resizable()
-//                                .scaledToFit()
-//                            
-//                            Image("image_dog")
-//                                .resizable()
-//                                .scaledToFit()
-//                            
-//                            Image("image_dragon2")
-//                                .resizable()
-//                                .scaledToFit()
-//                        }
+                        //                        ForEach(0..<10) { _ in
+                        //                            Image("image_lion")
+                        //                                .resizable()
+                        //                                .scaledToFit()
+                        //
+                        //                            Image("image_dog")
+                        //                                .resizable()
+                        //                                .scaledToFit()
+                        //
+                        //                            Image("image_dragon2")
+                        //                                .resizable()
+                        //                                .scaledToFit()
+                        //                        }
                         ForEach(viewModel.posts) { post in
                             let url = URL(string: post.imageUrl)
                             KFImage(url)
@@ -133,6 +133,18 @@ struct ProfileView: View {
                     }
                     
                     Spacer()
+                }
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                }label : {
+                    Image(systemName: "arrow.backward")
+                        .tint(.black)
                 }
             }
         }
